@@ -1,0 +1,41 @@
+{
+  "name": "pico-stream",
+  "version": "0.0.0",
+  "description": "A dom render loop using picodom and pull streams",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "start": "budo example/index.js --live -- -dv"
+  },
+  "dependencies": {
+    "picodom": "^1.0.0",
+    "pull-many": "^1.0.8",
+    "pull-notify": "^0.1.1",
+    "pull-stream": "^3.6.1"
+  },
+  "devDependencies": {
+    "budo": "^10.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nichoth/pico-stream.git"
+  },
+  "keywords": [
+    "stream",
+    "pull",
+    "pull-stream",
+    "picodom",
+    "hyperapp",
+    "render",
+    "virtual",
+    "dom"
+  ],
+  "author": "nichoth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nichoth/pico-stream/issues"
+  },
+  "homepage": "https://github.com/nichoth/pico-stream#readme"
+}

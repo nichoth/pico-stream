@@ -10,6 +10,8 @@ A dom render loop using picodom and pull streams
 
 ## example
 
+    $ npm start
+
 ```js
 var h = require('picodom').h
 var S = require('pull-stream')

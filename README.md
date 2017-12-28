@@ -27,17 +27,17 @@ function MyComponent (props) {
 }
 
 // pass in view function, event names, and initial state
-var view = render(MyComponent, ['foo', 'bar'], { hello: 'world' })
+var app = render(MyComponent, ['foo', 'bar'], { hello: 'world' })
 
 S(
-    view.source.foo(),
+    app.source.foo(),
     S.map(ev => ({ hello: ev.target.value })),
     S.through(state => console.log('new state', state)),
-    view.sink
+    app.sink
 )
 
 S(
-    view.source(),  // create new multiplexed stream
+    app.source(),  // create new multiplexed stream
     S.log()
 )
 ```

@@ -2,11 +2,9 @@
 
 A dom render loop using picodom and pull streams
 
-
 ## install
 
     npm install pico-stream
-
 
 ## example
 
@@ -29,6 +27,7 @@ function MyComponent (props) {
 // pass in view function, event names, and initial state
 var app = render(MyComponent, ['foo', 'bar'], { hello: 'world' })
 
+// create a render loop by piping data to app.sink
 S(
     app.source.foo(),
     S.map(ev => ({ hello: ev.target.value })),
@@ -36,8 +35,11 @@ S(
     app.sink
 )
 
+// create new multiplexed stream of all events -- a stream of tuples
+// with the event key followed by data:
+// [ 'foo', domEvent ]
 S(
-    app.source(),  // create new multiplexed stream
+    app.source(),  
     S.log()
 )
 ```

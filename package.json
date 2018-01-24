@@ -1,6 +1,6 @@
 {
   "name": "pico-stream",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A dom render loop using picodom and pull streams",
   "main": "index.js",
   "directories": {
